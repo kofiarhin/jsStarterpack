@@ -1,43 +1,30 @@
-import {elements} from "./views/base";
-
-import Search from './models/Search';
+import Search from "./models/Search";
 
 
-const state  = {};
-
-
-
-controlSearch = function  {
-
-
-	console.log("we on it");
-}
-
-//check if user has submitted search form
-
+console.log(Search);
 
 
 
 /*
-
-console.log(elements.searchForm);
-//1. create new search object  and add to state
-
-state.search = new Search("pizza");
+async function getResults() {
 
 
-//get result
-async function getData() {
+		//query
 
+		let query = "pizza";
 
-	await state.search.getResults();
+		const proxy = "https://cors-anywhere.herokuapp.com/";
 
-		//console.log(state.search.results);
-	}
+		const url = "https://www.food2fork.com/api/search";
+		const key = "2546bac631d9b3a6cedf3f06e99077e4";
+		
 
+		const recipes = await axios(`${proxy}https://www.food2fork.com/api/search?key=${key}&q=${query}`);
 
-	getData();
-//show result
+		console.log(recipes);
+		
 
-//console.log( state.search.results);
+}
+
+getResults();
 */
